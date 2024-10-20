@@ -108,6 +108,13 @@ namespace Assignment_2
                 throw;
             }
         }
+        /*
+            Initially, the time complexity was n^2. 
+            To reduce time complexity to nlogn, I to pay more effort on array traversing
+            There are trade off of "memory" vs time by adding parameter to track
+            Traversing array is very error-proning, especially for edge cases. Lots of time spent for debugging
+            Add watcher is very effective for debugging, especially with the above edge cases. 
+        */
 
         // Question 2: Sort Array by Parity
         public static int[] SortArrayByParity(int[] nums)
@@ -221,6 +228,10 @@ namespace Assignment_2
                 throw;
             }
         }
+        /*
+            Again to reduce the time complexity, and handling negatives scenarios, it is necessary
+            to spend time and effort for analysis
+        */
 
         // Question 5: Decimal to Binary Conversion
         public static string DecimalToBinary(int decimalNumber)
@@ -261,6 +272,10 @@ namespace Assignment_2
                 throw;
             }
         }
+        /*
+            Indeed there is prebuild C# functions, suggest to clarify if we need to build it manually. 
+            And for negative number, it depends on # bit used. 
+        */
 
         // Question 6: Find Minimum in Rotated Sorted Array
         public static int FindMin(int[] nums)
@@ -279,13 +294,17 @@ namespace Assignment_2
                         break;
                     }
                 }
-                return min; // Placeholder
+                return min; 
             }
             catch (Exception)
             {
                 throw;
             }
         }
+        /*
+            Rotated sorted array description wasn't clear, my assumption was that the sorted array (in ascending order) is split 
+            and the 1st rotated ONCE to the back. Suggest to have clearer description
+        */
 
         // Question 7: Palindrome Number
         public static bool IsPalindrome(int x)
